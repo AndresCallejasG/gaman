@@ -1,0 +1,14 @@
+.body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gameSection{
+    display: block;
+    height: 100vh;
+    width: 100vw;
+}
+.gameContainer{
+    height: 100%;
+    width: 100%;
+}
