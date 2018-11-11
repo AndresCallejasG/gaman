@@ -17,7 +17,7 @@ body{
 }
 
 .splash {
-    background: url(../img/gif_carga.gif) no-repeat center center;
+    background: url(../img/gif_carga.gif) no-repeat center center ;
     background-size: cover;
     height: 100%;
 }
