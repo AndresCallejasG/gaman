@@ -1,16 +1,13 @@
 body{
     margin: 0;
     padding: 0;    
-    overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
+    /* overflow-x: hidden; */
+    
 }
 
 .gameSection {
-    height: 100%;
-    width: 100%;
-    display: block;
-    
+    height: 100vh;
+    width: 100vw;
 }
 
 .gameContainer{
@@ -20,15 +17,22 @@ body{
 
 .splash {
     height: 100%;
+    object-fit: cover;
     width: 100%;
-    display: block;
+    overflow: hidden;
+}
+
+.btnMenuContainer {
+ 
+
+
 }
 
 .menu{
     background-image: url(../img/fondos/fondo-inicio.png);
 }
 
-.backBtn{
+/* .backBtn{
     float: left;
     content: url(../img/botones/back.png);
 
@@ -37,4 +41,4 @@ body{
     float: right;
     content: url(../img/botones/home.png);
 
-}
+} */
