@@ -1,8 +1,8 @@
 body{
     margin: 0;
-    padding: 0;    
-    /* overflow-x: hidden; */
-    
+    padding: 0; 
+    box-sizing: border-box;   
+    overflow-x: hidden;    
 }
 .gameSection {
     height: 100vh;
@@ -12,6 +12,8 @@ body{
 .gameContainer{
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .splash {
@@ -23,32 +25,60 @@ body{
 
 .menu{
     background-image: url(../img/fondos/fondo-inicio.png);
-    padding-top: 50%;   
+    background-repeat: no-repeat;
+    background-size: cover;  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
     
 }
+
 .menuBtnContainer {
     display: flex;
     flex-direction: column;
+    padding-top: 50%;
 }
 .credits{
-    padding: 40%;
+    padding-top: 40%;
+}
+.cardsLvlMenu{
+    background-image: url(../img/fondos/fondo-inicio.png);
+    background-repeat: no-repeat;
+    background-size: cover;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;   
+}
+.btnLevelContainer{
+    padding-top: 10%;
+    
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30%;
+    padding-top: 5%;
+    width: 90%;
+
+}
+
+
+
+.backBtn{
+    content: url(../img/botones/back.png);
+    flex: 1;
     
 
 }
-
-
-
-/* .backBtn{
-    float: left;
-    content: url(../img/botones/back.png);
-
+.headerBtnSpace{
+    flex: 8;
 }
 .homeBtn{
-    float: right;
     content: url(../img/botones/home.png);
+    flex: 1;
 
-} */
+} 
