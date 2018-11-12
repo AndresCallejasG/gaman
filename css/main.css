@@ -4,7 +4,6 @@ body{
     /* overflow-x: hidden; */
     
 }
-
 .gameSection {
     height: 100vh;
     width: 100vw;
@@ -22,15 +21,26 @@ body{
     overflow: hidden;
 }
 
-.btnMenuContainer {
- 
-
-
-}
-
 .menu{
     background-image: url(../img/fondos/fondo-inicio.png);
+    padding-top: 50%;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    
 }
+.menuBtnContainer {
+    display: flex;
+    flex-direction: column;
+}
+.credits{
+    padding: 40%;
+    
+
+}
+
+
 
 /* .backBtn{
     float: left;
