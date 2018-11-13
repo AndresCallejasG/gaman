@@ -47,7 +47,7 @@ function init(){
         setTimeout(() => {
             firstCard.classList.remove('flip');
             secondCard.classList.remove('flip');
-            var urlBackImage = "./img/cartas/nivel2/retirocarta.png";
+            var urlBackImage = "./img/cartas/" + firstCard.dataset.level+ "/retirocarta.png";
             console.log(urlBackImage);
             firstCard.src = urlBackImage;
             secondCard.src = urlBackImage;
