@@ -1,3 +1,2 @@
 # gaman
-Juego de memoria
-Aplicaciones Moviles - UPB - 2018-2
+Aplicaciones Moviles - 2018/2 - UPB
