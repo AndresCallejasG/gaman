@@ -42,7 +42,7 @@ body{
     padding-top: 20%;
 }
 .cardsLvlMenu{
-    background-image: url(../img/fondos/fondo-inicio.png);
+    background-image: url(../img/fondos/estrellasGemelas.png);
     background-repeat: no-repeat;
     background-size: cover;   
     display: flex;
@@ -82,7 +82,7 @@ body{
 
 } 
 .cardsScreen{
-    background-image: url(../img/fondos/estrellasGemelas.png);
+    background-image: url(../img/fondos/fondoColor.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
