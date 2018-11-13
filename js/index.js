@@ -1,6 +1,11 @@
 window.onload=init;
 let activeLevel = 0;
 let cardMatchCont = 0;
+let btnLevel1;
+var btnLevel2;
+var btnLevel3;
+var btnLevel4;
+var btnLevel5;
 
 function init(){
 
@@ -33,11 +38,11 @@ function init(){
     var btnBack5=document.getElementById("btnBack5");    
     var btnHome5=document.getElementById("btnHome5");
 
-    var btnLevel1=document.getElementById("btnNivel1");
-    var btnLevel2=document.getElementById("btnNivel2");
-    var btnLevel3=document.getElementById("btnNivel3");
-    var btnLevel4=document.getElementById("btnNivel4");
-    var btnLevel5=document.getElementById("btnNivel5");
+    btnLevel1=document.getElementById("btnNivel1");
+    btnLevel2=document.getElementById("btnNivel2");
+    btnLevel3=document.getElementById("btnNivel3");
+    btnLevel4=document.getElementById("btnNivel4");
+    btnLevel5=document.getElementById("btnNivel5");
 
 
     //add events
@@ -142,28 +147,32 @@ function init(){
             setTimeout(function() {
                 console.log("active:" +  activeLevel);
                 console.log("parejas: " + cardMatchCont);
+                cardMatchCont = 0;
                 switch(activeLevel){
                     case 1:
                     btnLevel2.addEventListener("click",function(){
                         activeLevel = 2;
                         change("cardsMenuSection","cardsGame2Section");
                     });
-                    activeLevel = 2; 
+                    activeLevel = 2;
+                    btnLevel2.src = "./img/botones/nivel2rayo.png"
                     change("cardsGame1Section","cardsGame1gif");
-
-                    
+                    setTimeout(function() {
+                        change("cardsGame1gif","cardsGame2Section");                        
+                    }, 10000);
                     break;
 
                     case 2:
                     btnLevel3.addEventListener("click",function(){
-                        activeLevel = 3;
+                        activeLevel = 3;           
                         change("cardsMenuSection","cardsGame3Section");
                     });
                     activeLevel = 3;
+                    btnLevel3.src = "./img/botones/nivel3aracne.png" 
                     change("cardsGame2Section","cardsGame2gif");
                     setTimeout(function() {
                         change("cardsGame2gif","cardsGame3Section");                        
-                    }, 4800);
+                    }, 10000);
                     break; 
                     
                     case 3:
@@ -171,11 +180,12 @@ function init(){
                         activeLevel = 4;
                         change("cardsMenuSection","cardsGame4Section");
                     });
-                    activeLevel = 4;                    
+                    activeLevel = 4;
+                    btnLevel4.src = "./img/botones/nivel4evaky.png"                    
                     change("cardsGame3Section","cardsGame3gif");
                     setTimeout(function() {
                         change("cardsGame3gif","cardsGame4Section");                        
-                    }, 4800);
+                    }, 10000);
                     break;
 
                     case 4:
@@ -184,17 +194,18 @@ function init(){
                         change("cardsMenuSection","cardsGame5Section");
                     });
                     activeLevel = 5;
+                    btnLevel5.src = "./img/botones/nivel5socrates.png"
                     change("cardsGame4Section","cardsGame4gif");
                     setTimeout(function() {
                         change("cardsGame4gif","cardsGame5Section");                        
-                    }, 4800);
+                    }, 10000);
                     break;
 
                     case 5:
                     change("cardsGame5Section","cardsGame5gif");
                     setTimeout(function() {
                         change("cardsGame5gif","creditsSection");                        
-                    }, 4800);
+                    }, 10000);
                     break;
 
 
