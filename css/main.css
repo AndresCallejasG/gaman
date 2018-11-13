@@ -12,8 +12,6 @@ body{
 .gameContainer{
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .splash {
@@ -49,8 +47,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
-    width: 100%;   
+    justify-items: center;   
 }
 .btnLevelContainer{
     padding-top: 10%;
@@ -60,9 +57,10 @@ body{
 .header{
     display: flex;
     flex-direction: row;
-    padding-bottom: 30%;
-    padding-top: 5%;
-    width: 90%;
+    padding-top: 3%;
+    height: 6%;
+    padding-bottom: 5%;
+    width: 97%
 
 }
 
@@ -82,3 +80,20 @@ body{
     flex: 1;
 
 } 
+.cardsScreen{
+    background-image: url(../img/fondos/estrellasGemelas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+         
+}
+.gameZone{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10%;
+    justify-self: center;
+}
