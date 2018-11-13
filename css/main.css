@@ -59,7 +59,7 @@ body{
     display: flex;
     flex-direction: row;
     padding-top: 3%;
-    height: 6%;
+    height: 5%;
     width: 97%
 
 }
@@ -94,8 +94,8 @@ body{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
     justify-content: center;
-    padding-bottom: 10%;
     justify-self: center;
 
 }
