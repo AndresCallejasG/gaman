@@ -22,7 +22,7 @@ body{
 }
 
 .menu{
-    background-image: url(../img/fondos/fondo-inicio.png);
+    background-image: url(../img/gifs/pagina-inicial-1.gif);
     background-repeat: no-repeat;
     background-size: cover;  
     display: flex;
@@ -35,10 +35,11 @@ body{
 .menuBtnContainer {
     display: flex;
     flex-direction: column;
-    padding-top: 50%;
+    padding-top: 88%;
+    width: 90%;
 }
 .credits{
-    padding-top: 40%;
+    padding-top: 20%;
 }
 .cardsLvlMenu{
     background-image: url(../img/fondos/fondo-inicio.png);
