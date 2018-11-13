@@ -1,6 +1,8 @@
 window.onload=init;
 function init(){
-
+    let activeLevel = 0;
+    let cardMatchCont = 0;
+    
     const cards = document.querySelectorAll('.card');
 
     let hasFlippedCard = false;
@@ -38,6 +40,10 @@ function init(){
     function disableCards() {
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
+        cardMatchCont = cardMatchCont + 1;
+        if(hasWon()){
+            console.log("ganasteeee");
+        }
         resetBoard();
     }
 
@@ -61,8 +67,16 @@ function init(){
         [firstCard, secondCard] = [null, null];
     }
 
+    function hasWon(){
 
-
+        if ((2+activeLevel) == cardMatchCont){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+    
     cards.forEach(card => card.addEventListener('click', flipCard));
 
 }

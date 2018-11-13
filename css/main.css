@@ -7,6 +7,7 @@ body{
 .gameSection {
     height: 100vh;
     width: 100vw;
+    display: block;
 }
 
 .gameContainer{
@@ -112,6 +113,7 @@ body{
     transform-style: preserve-3d;
     transition: transform .5s;
     padding: 5px;
+
 }
 .card:active {
     transform: scale(0.97);
