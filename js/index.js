@@ -1,11 +1,12 @@
 window.onload=init;
+let activeLevel = 0;
+let cardMatchCont = 0;
 
 function init(){
 
     loadSplash(); 
 
-    let activeLevel = 0;
-    let cardMatchCont = 0;
+    
 
     //Navegacion
 
@@ -48,6 +49,7 @@ function init(){
         change("menuSection","creditsSection");
     });
     btnLevel1.addEventListener("click",function(){
+        activeLevel = 1;
         change("cardsMenuSection","cardsGame1Section");
     });
 
@@ -55,7 +57,7 @@ function init(){
         change("cardsMenuSection","menuSection");
     });
     //Botones nivel1
-    btnBack1.addEventListener("click",function(){
+    btnBack1.addEventListener("click",function(){        
         change("cardsGame1Section","cardsMenuSection");
     });
     btnHome1.addEventListener("click",function(){
@@ -135,7 +137,71 @@ function init(){
         secondCard.removeEventListener('click', flipCard);
         cardMatchCont = cardMatchCont + 1;
         if(hasWon()){
+
             console.log("ganasteeee");
+            setTimeout(function() {
+                console.log("active:" +  activeLevel);
+                console.log("parejas: " + cardMatchCont);
+                switch(activeLevel){
+                    case 1:
+                    btnLevel2.addEventListener("click",function(){
+                        activeLevel = 2;
+                        change("cardsMenuSection","cardsGame2Section");
+                    });
+                    activeLevel = 2; 
+                    change("cardsGame1Section","cardsGame1gif");
+
+                    
+                    break;
+
+                    case 2:
+                    btnLevel3.addEventListener("click",function(){
+                        activeLevel = 3;
+                        change("cardsMenuSection","cardsGame3Section");
+                    });
+                    activeLevel = 3;
+                    change("cardsGame2Section","cardsGame2gif");
+                    setTimeout(function() {
+                        change("cardsGame2gif","cardsGame3Section");                        
+                    }, 4800);
+                    break; 
+                    
+                    case 3:
+                    btnLevel4.addEventListener("click",function(){
+                        activeLevel = 4;
+                        change("cardsMenuSection","cardsGame4Section");
+                    });
+                    activeLevel = 4;                    
+                    change("cardsGame3Section","cardsGame3gif");
+                    setTimeout(function() {
+                        change("cardsGame3gif","cardsGame4Section");                        
+                    }, 4800);
+                    break;
+
+                    case 4:
+                    btnLevel5.addEventListener("click",function(){
+                        activeLevel = 5;
+                        change("cardsMenuSection","cardsGame5Section");
+                    });
+                    activeLevel = 5;
+                    change("cardsGame4Section","cardsGame4gif");
+                    setTimeout(function() {
+                        change("cardsGame4gif","cardsGame5Section");                        
+                    }, 4800);
+                    break;
+
+                    case 5:
+                    change("cardsGame5Section","cardsGame5gif");
+                    setTimeout(function() {
+                        change("cardsGame5gif","creditsSection");                        
+                    }, 4800);
+                    break;
+
+
+                    
+                    
+                }
+              }, 2000);
         }
         resetBoard();
     }
