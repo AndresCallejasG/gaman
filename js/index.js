@@ -44,6 +44,62 @@ function init(){
     btnLevel4=document.getElementById("btnNivel4");
     btnLevel5=document.getElementById("btnNivel5");
 
+    var btnSiguiente1=document.getElementById("btnSiguiente1");
+    var btnSiguiente2=document.getElementById("btnSiguiente2");
+    var btnSiguiente3=document.getElementById("btnSiguiente3");
+    var btnSiguiente4=document.getElementById("btnSiguiente4");
+    var btnSiguiente5=document.getElementById("btnSiguiente5");
+
+    var modal1 = document.getElementById("modal1");
+    var modal2 = document.getElementById("modal2");
+    var modal3 = document.getElementById("modal3");
+    var modal4 = document.getElementById("modal4");
+    var modal5 = document.getElementById("modal5");
+
+    btnSiguiente1.addEventListener("click",function(){
+        modal1.style.display ="none";
+        change("cardsGame1Section","cardsGame1gif");
+        setTimeout(function() {
+            change("cardsGame1gif","cardsGame2Section");                        
+        }, 10000);
+
+    });
+    btnSiguiente2.addEventListener("click",function(){
+        modal2.style.display ="none";
+        change("cardsGame2Section","cardsGame2gif");
+        setTimeout(function() {
+            change("cardsGame2gif","cardsGame3Section");                        
+        }, 10000);
+    });
+    btnSiguiente3.addEventListener("click",function(){
+        modal3.style.display ="none";
+        change("cardsGame3Section","cardsGame3gif");
+        setTimeout(function() {
+            change("cardsGame3gif","cardsGame4Section");                        
+        }, 10000);
+    });
+    btnSiguiente4.addEventListener("click",function(){
+        modal4.style.display ="none";
+        change("cardsGame4Section","cardsGame4gif");
+        setTimeout(function() {
+            change("cardsGame4gif","cardsGame5Section");                        
+        }, 10000);
+        break;
+        
+    });
+    btnSiguiente5.addEventListener("click",function(){
+        modal5.style.display ="none";
+        change("cardsGame5Section","cardsGame5gif");
+        setTimeout(function() {
+            change("cardsGame5gif","creditsSection");                        
+        }, 10000);
+        break;
+    });
+
+
+
+    
+
 
     //add events
     
@@ -154,12 +210,12 @@ function init(){
                         activeLevel = 2;
                         change("cardsMenuSection","cardsGame2Section");
                     });
+                    modal1.style.display = "block";
                     activeLevel = 2;
                     btnLevel2.src = "./img/botones/nivel2rayo.png"
-                    change("cardsGame1Section","cardsGame1gif");
-                    setTimeout(function() {
-                        change("cardsGame1gif","cardsGame2Section");                        
-                    }, 10000);
+                    
+                    
+                    
                     break;
 
                     case 2:
@@ -167,12 +223,11 @@ function init(){
                         activeLevel = 3;           
                         change("cardsMenuSection","cardsGame3Section");
                     });
+                    modal2.style.display = "block";
                     activeLevel = 3;
                     btnLevel3.src = "./img/botones/nivel3aracne.png" 
-                    change("cardsGame2Section","cardsGame2gif");
-                    setTimeout(function() {
-                        change("cardsGame2gif","cardsGame3Section");                        
-                    }, 10000);
+                    
+                    
                     break; 
                     
                     case 3:
@@ -180,12 +235,11 @@ function init(){
                         activeLevel = 4;
                         change("cardsMenuSection","cardsGame4Section");
                     });
+                    modal3.style.display = "block";
                     activeLevel = 4;
                     btnLevel4.src = "./img/botones/nivel4evaky.png"                    
-                    change("cardsGame3Section","cardsGame3gif");
-                    setTimeout(function() {
-                        change("cardsGame3gif","cardsGame4Section");                        
-                    }, 10000);
+                    
+                    
                     break;
 
                     case 4:
@@ -193,26 +247,22 @@ function init(){
                         activeLevel = 5;
                         change("cardsMenuSection","cardsGame5Section");
                     });
+                    modal4.style.display = "block";
                     activeLevel = 5;
                     btnLevel5.src = "./img/botones/nivel5socrates.png"
-                    change("cardsGame4Section","cardsGame4gif");
-                    setTimeout(function() {
-                        change("cardsGame4gif","cardsGame5Section");                        
-                    }, 10000);
-                    break;
+                    
+                    
 
                     case 5:
-                    change("cardsGame5Section","cardsGame5gif");
-                    setTimeout(function() {
-                        change("cardsGame5gif","creditsSection");                        
-                    }, 10000);
-                    break;
+                    modal1.style.display = "block";
+                    
+                    
 
 
                     
                     
                 }
-              }, 2000);
+              }, 1000);
         }
         resetBoard();
     }
