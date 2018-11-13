@@ -7,7 +7,7 @@ body{
 .gameSection {
     height: 100vh;
     width: 100vw;
-    display: none;
+    display: block;
 }
 .gameSectionSplash {
     height: 100vh;
@@ -56,10 +56,16 @@ body{
     align-items: center;
     justify-items: center;   
     justify-content: space-between;
+    width: 100%;
 }
 .btnLevelContainer{
     padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
     
+}
+.levelbtn{
+    text-align: center;
 }
 
 .header{
@@ -105,6 +111,8 @@ body{
     justify-content: center;
     justify-self: center;
     perspective: 1000px;
+    width: 100%;
+
 
 }
 .gifScreen {
