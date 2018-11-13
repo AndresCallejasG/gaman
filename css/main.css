@@ -97,6 +97,7 @@ body{
     margin: auto;
     justify-content: center;
     justify-self: center;
+    perspective: 1000px;
 
 }
 .gifScreen {
@@ -104,4 +105,16 @@ body{
     object-fit: cover;
     width: 100%;
     overflow: hidden;
+}
+.card{
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s
+}
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;    
+}
+.card.flip{
+    transform: rotateY(180deg);
 }
