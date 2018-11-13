@@ -110,7 +110,8 @@ body{
 .card{
     transform: scale(1);
     transform-style: preserve-3d;
-    transition: transform .5s
+    transition: transform .5s;
+    padding: 5px;
 }
 .card:active {
     transform: scale(0.97);
