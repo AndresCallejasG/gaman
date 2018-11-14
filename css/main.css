@@ -5,8 +5,8 @@ body{
     overflow-x: hidden;    
 }
 .gameSection {
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
+    height: auto;
     display: none;
 }
 .gameSectionSplash {
@@ -27,20 +27,40 @@ body{
     overflow: hidden;
 }
 
+#btnCardsGame{
+    width: 100%;
+    height: auto;
+    margin-top: -2%;
+    margin-left: 3%;
+}
+#btnMemoryGame{
+    width: 100%;
+    height: auto;
+    margin-top: -2%;
+    margin-left: 3%;
+}
+
+#btnCredits{
+    width: 100%;
+    height: auto;
+    margin-top: -2%;
+    margin-left: 3%;
+}
+
+
+
 .menu{
     background-image: url(../img/gifs/pagina-inicial-1.gif);
     background-repeat: no-repeat;
-    background-size: cover;  
-    display: flex;
-    flex-direction: column;
+    background-size: cover; 
     align-items: center;
     justify-items: center;
+    width: 100%;
+    height: auto;
     
 }
 
 .menuBtnContainer {
-    display: flex;
-    flex-direction: column;
     padding-top: 88%;
     width: 90%;
 }
@@ -50,71 +70,92 @@ body{
 .cardsLvlMenu{
     background-image: url(../img/fondos/estrellasGemelas.png);
     background-repeat: no-repeat;
-    background-size: cover;   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;   
-    justify-content: space-between;
+    background-size: cover;
     width: 100%;
+    height: auto;
 }
 .btnLevelContainer{
     padding-bottom: 10%;
-    display: flex;
-    flex-direction: column;
+    margin-left: 22%;
+    margin-right: auto;
+    margin-top: 10%;
     
 }
-.levelbtn{
+.levelBtn{
     text-align: center;
+    width: 70%;
+    height: auto;
 }
 
 .header{
-    display: flex;
-    flex-direction: row;
+    
     padding-top: 3%;
-    height: 5%;
-    width: 97%
+    height: auto;
+    width: 100%;
 
 }
 
+#btnInstructions{
+    margin-top: 40%;
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+}
 
 
 .backBtn{
     content: url(../img/botones/back.png);
-    flex: 1;
+    width: 9%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 2%;
     
 
 }
 .headerBtnSpace{
-    flex: 8;
+    
 }
 .homeBtn{
     content: url(../img/botones/home.png);
-    flex: 1;
+    width: 9%;
+    height: auto;
+    margin-top: 1%;
+    margin-right: 2%;
+    float: right;
+
+} 
+
+.homeBtn1{
+    
+    margin-top: -9% !important;
 
 } 
 .cardsScreen{
     background-image: url(../img/fondos/fondoColor.png);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
     justify-items: center;
     justify-content: space-between;
          
 }
+.gameZone1{
+    
+    margin-left: 8% !important;
+    margin-top: 10%;
+}
 .gameZone{
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
     margin: auto;
     justify-content: center;
     justify-self: center;
-    perspective: 1000px;
-    width: 100%;
-
-
+    width: 90%;
+    margin-top: 10%;
+    height: -webkit-fill-available;
+    margin-left: 5%;
+    margin-right: 5%;
 }
+
+
 .gifScreen {
     height: 100%;
     object-fit: cover;
@@ -125,7 +166,14 @@ body{
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
-    padding: 5px;
+    padding: 2%;
+    width: 38%;
+    height: auto;
+
+}
+
+.card2{
+    width: 29% !important;
 
 }
 .card:active {
@@ -154,11 +202,8 @@ body{
 /* Modal Content */
 .modal-content {
     margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 5%;
     width: 80%;
-    display: flex;
-    flex-direction: column;
 }
 
 /* The Close Button */
@@ -167,4 +212,31 @@ body{
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.modalimg{
+    width: 80%;
+    height: auto;
+}
+#creditsSection{
+    background-image: url(../img/gifs/creditos.gif);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+}
+
+#btnBackCredits{
+    margin-top: 6%;
+    margin-left: 6%;
+    margin-bottom: 165%;
+    background-repeat: no-repeat;
+}
+
+#btnHomeCredits{
+    margin-top: 4% !important;
+    margin-right: 5% !important;
+
 }
