@@ -79,26 +79,17 @@ function init(){
         }, 10000);
     });
     btnSiguiente4.addEventListener("click",function(){
+        debugger;
         modal4.style.display ="none";
+        
+        modal1.style.display="none";
         change("cardsGame4Section","cardsGame4gif");
+        
         setTimeout(function() {
             change("cardsGame4gif","cardsGame5Section");                        
         }, 10000);
-        break;
         
-    });
-    btnSiguiente5.addEventListener("click",function(){
-        modal5.style.display ="none";
-        change("cardsGame5Section","cardsGame5gif");
-        setTimeout(function() {
-            change("cardsGame5gif","creditsSection");                        
-        }, 10000);
-        break;
-    });
-
-
-
-    
+    });  
 
 
     //add events
@@ -152,7 +143,18 @@ function init(){
     btnHome5.addEventListener("click",function(){
         change("cardsGame5Section","menuSection");
     });
+
+    /*Credits*/
+    var btnBackCredits=document.getElementById("btnBackCredits");    
+    var btnHomeCredits=document.getElementById("btnHomeCredits");
     
+    //Botones Creditos
+    btnBackCredits.addEventListener("click",function(){
+        change("creditsSection","cardsMenuSection");
+    });
+    btnHomeCredits.addEventListener("click",function(){
+        change("creditsSection","menuSection");
+    });
     
     /* Logica juego de memoria */
 
@@ -254,7 +256,21 @@ function init(){
                     
 
                     case 5:
-                    modal1.style.display = "block";
+                    modal5.style.display="block";
+                    setTimeout(function(){
+                        modal5.style.display ="none";
+                        modal4.style.display="none";
+                        modal3.style.display ="none";
+                        modal2.style.display="none";
+                        modal1.style.display ="none";
+                        document.getElementById("cardsGame4Section").style.display="none";
+                    },2000)
+                    
+                    
+                    change("cardsGame5Section","cardsGame5gif");
+                    setTimeout(function() {
+                        change("cardsGame5gif","menuSection");                        
+                    }, 10000);
                     
                     
 
@@ -310,5 +326,5 @@ function loadSplash(){
     setTimeout(function() {
       document.getElementById("splashSection").style.display = "none";
       document.getElementById("menuSection").style.display = "block";
-    }, 4800);
+    }, 4700);
 }
